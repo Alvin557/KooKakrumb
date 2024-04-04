@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+text-magenta-500{
+  color:#900C3F;
+}
+bg-magenta-500{
+  color:#900C3F;
+}
