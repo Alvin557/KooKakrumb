@@ -1,0 +1,17 @@
+
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+  
+  .product-scroll-container {
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .product-scroll-inner {
+    display: flex;
+    animation: scroll 150s linear infinite;
+  }
+  
