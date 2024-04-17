@@ -66,10 +66,9 @@ const ProductScroll = () => {
                 <p className="text-white mt-2">Price: ${product.price}</p>
                 <p className="text-white mt-2">Reviews: {product.reviews}</p>
                 <button
-                  onClick={() => addToCart(product)}
                   className="mt-4 bg-slate-950 text-white px-4 py-2 rounded hover:text-rose-900"
                 >
-                  Add to Cart
+                  View Product
                 </button>
               </div>
             </div>
