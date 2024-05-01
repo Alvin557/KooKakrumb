@@ -21,8 +21,8 @@ const Header = ({ cartItems }) =>  {
           <a className="text-lg font-medium hover:text-rose-800 mb-2 lg:mb-0" href="#our-story" rel="ugc">Our Story</a>
           <a className="text-lg font-medium hover:text-rose-800 mb-2 lg:mb-0" href="#products" rel="ugc">Our Breadcrumbs</a>
           <Link to="/shop" className="text-lg font-medium hover:text-rose-800 mb-2 lg:mb-0">Shop</Link>
-          <a className="text-lg font-medium hover:text-rose-800 mb-2 lg:mb-0" href="#" rel="ugc">Recipes</a>
-          <a className="text-lg font-medium hover:text-rose-800 mb-2 lg:mb-0" href="#" rel="ugc">Stockists</a>
+          <Link to="/recipes" className="text-lg font-medium hover:text-rose-800 mb-2 lg:mb-0">Recipes</Link>
+          <Link to="/stockists" className="text-lg font-medium hover:text-rose-800 mb-2 lg:mb-0">Stockists</Link>
       </div>
 
       <div className="flex items-center ml-auto gap-4">

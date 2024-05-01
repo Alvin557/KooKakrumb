@@ -5,12 +5,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import axios from 'axios';
 
 const Shop = () => {
-  const [cartItems, setCartItems] = useState(0);
-
-  const addToCart = () => {
-    // Increment the number of items in the cart
-    setCartItems(prevCount => prevCount + 1);
-  };
+  
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -21,7 +16,7 @@ const Shop = () => {
     try {
       const response = await axios.get('http://www.localhost:1337/api/products?populate=*', {
         headers: {
-          Authorization: `Bearer d78d3b01bb4210421c91ab76df4091e5cc957f593ae6e8760ae4f4b4bfff80f7e0e719b0c8d6a5516d9cfddc257736760eecb4e53bcb5d76ce86d7453bc56271397e52b582818e4b90f5754d1c11b482146281bddf44360e55d5b5fff17007105b9e98dd78ce7d90ba953ca731839966f70a7d30acd455c7605c67f8f27f5656`,
+          Authorization: `Bearer ad6ace83831cafcaba86a9d98d3e9fb038098bb093c5bfb6ad313391de1f2d139d2b59a2c933d8a0ddd66aaa3ddbcc7a468b53ceba2274f8a43f8848d03341dfa20c03d494c7e29ef510eb23fd87866fbba78c343c8cab2148798b442b14e3189ac2609ea943d56a114390b02915c2e254bfe9392d4f25d34002b8483217ee24`,
         },
       });
       setProducts(response.data.data); // Access the 'data' array in the response
@@ -49,7 +44,7 @@ const Shop = () => {
               <p>
               <span className="text-white font-semibold me-1">Quantity:</span>
               <input type="number" min="1" defaultValue="1" className="text-center border border-rose-900 w-8 mt-2" />
-              <button className="bg-gray-950 text-white px-4 py-2 rounded-xl mx-6 mt-2" onClick={addToCart}>Add to Cart</button>
+              <button className="bg-gray-950 text-white px-4 py-2 rounded-xl mx-6 mt-2" >Add to Cart</button>
               </p>
             </div>
           ))}

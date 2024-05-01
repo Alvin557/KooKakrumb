@@ -3,6 +3,7 @@ import Logo from '../assets/Logo.jpg';
 import Email from '../assets/email-address.svg';
 import Location from '../assets/location-map.svg';
 import Phone from '../assets/phone-call.svg';
+import { Link } from 'react-router-dom';
 
 export const Footer = () => {
   return (
@@ -20,19 +21,16 @@ export const Footer = () => {
         <h2 className="mb-6 text-lg font-semibold uppercase text-rose-900">Useful Links</h2>
         <ul className="text-gray-500 dark:text-gray-400 font-medium">
           <li className="mb-4">
-            <a href="#about-us" className="hover:text-rose-900">Our Story</a>
+          <Link to="/faqs" className="hover:text-rose-900">FAQs</Link>
           </li>
           <li className="mb-4">
-            <a href="#our-services" className="hover:text-rose-900">Our Breadcrumbs</a>
+            <a href="#our-services" className="hover:text-rose-900">Store Policies</a>
           </li>
           <li className="mb-4">
-            <a href="#our-projects" className="hover:text-rose-900">Shop</a>
+          <Link to="/contact" className="hover:text-rose-900">Contact Us</Link>
           </li>
           <li className='mb-4'>
-            <a href="#contact-us" className="hover:text-rose-900">Recipes</a>
-          </li>
-          <li>
-            <a href="#contact-us" className="hover:text-rose-900">Stockists</a>
+            <a href="#contact-us" className="hover:text-rose-900">Privacy Policy</a>
           </li>
         </ul>
       </div>
