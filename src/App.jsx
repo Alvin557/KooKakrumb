@@ -11,6 +11,7 @@ import Contact from './components/contact.jsx';
 import CartModal from './components/CartModel.jsx';
 import CartPage from './components/CartPage.jsx';
 import CheckoutPage from './components/Checkout.jsx';
+import FeedbackForm from './components/feedback.jsx';
 
 const App = () => {
   const [cartCount, setCartCount] = useState(0);
@@ -39,6 +40,7 @@ const App = () => {
           <Route path="/recipes" element={<Recipes />} />
           <Route path="/stockists" element={<Stockists />} />
           <Route path="/faqs" element={<FAQs />} />
+          <Route path="/feedback" element={<FeedbackForm />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<div>No match</div>} />
         </Routes>

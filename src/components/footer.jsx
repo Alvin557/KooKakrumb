@@ -29,6 +29,9 @@ export const Footer = () => {
           <li className="mb-4">
           <Link to="/contact" className="hover:text-rose-900">Contact Us</Link>
           </li>
+          <li className="mb-4">
+          <Link to="/feedback" className="hover:text-rose-900">Feedback</Link>
+          </li>
           <li className='mb-4'>
             <a href="#contact-us" className="hover:text-rose-900">Privacy Policy</a>
           </li>
