@@ -12,8 +12,8 @@ export const Footer = () => {
     <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-x-56 lg:grid-cols-3 lg:gap-x-6 mb-12">
       <div className="lg:grid lg:justify-start">
         <a href="#home-page" className="flex items-center">
-          <img src={Logo} className="h-8 me-3" alt="Kookakramb Logo" />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap text-rose-900">Kookakramb <br></br>Every Bite, a Delicious Tale!</span>
+          <img src={Logo} className="h-8 me-3" alt="KookAkrumb Logo" />
+          <span className="self-center text-2xl font-semibold whitespace-nowrap text-rose-900">KookAkrumb <br></br>Every Bite, a Delicious Tale!</span>
         </a>
         <p className="mt-5 text-gray-500 dark:text-white">Kookakrumb Seasoned Breadcrumbs is proudly, an Australian run family business, that produces premium quality breadcrumb coatings for food, within Australian and International markets. The business first start producing the delicious breadcrumbs in a small factory located in Subiaco, WA. Slowly as the demand for Kookakrumb breadcrumbs increased a larger processing facility had to be sourced and we moved over to Osborne Park, WA. </p>
       </div>
@@ -43,7 +43,7 @@ export const Footer = () => {
           </li>
           <li className="mb-4 flex">
             <img className="w-5 h-5 mr-2" src={Email} alt="Email Icon" />
-            <span className="hover:text-rose-900">Kookakramb@gmail.com</span>
+            <span className="hover:text-rose-900">KookAkrumb@gmail.com</span>
           </li>
           <li className="mb-4 flex">
             <img className="w-5 h-5 mr-2" src={Location} alt="Location Icon" />
@@ -54,7 +54,7 @@ export const Footer = () => {
     </div>
     <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700" />
     <div className="flex flex-col items-center justify-between sm:flex-row">
-      <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400 mb-2 sm:mb-0">© 2024 <a href="" className="hover:underline">Kookakramb</a>. All Rights Reserved.</span>
+      <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400 mb-2 sm:mb-0">© 2024 <a href="" className="hover:underline">KookAkrumb</a>. All Rights Reserved.</span>
       <div className="flex flex-wrap justify-center sm:justify-start">
         <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400 ml-2 mb-2 sm:mb-0">Imprint</span>
         <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400 ml-2">Privacy Policy</span>

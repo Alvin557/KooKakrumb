@@ -4,8 +4,12 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import axios from 'axios';
 
-const Shop = () => {
+const Shop = ({ onAddToCart }) => {
   
+  const handleAddToCart = (product) => {
+    onAddToCart(product);
+  };
+
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -43,9 +47,19 @@ const Shop = () => {
               <p className="text-white text-xl font-semibold mt-2">Price: ${product.attributes.Price}</p>
               <p>
               <span className="text-white font-semibold me-1">Quantity:</span>
-              <input type="number" min="1" defaultValue="1" className="text-center border border-rose-900 w-8 mt-2" />
-              <button className="bg-gray-950 text-white px-4 py-2 rounded-xl mx-6 mt-2" >Add to Cart</button>
-              </p>
+              <input
+                type="number"
+                min="1"
+                defaultValue="1"
+                className="text-center border border-rose-900 w-8 mt-2"
+              />
+              <button
+                className="bg-gray-950 text-white px-4 py-2 rounded-xl mx-6 mt-2"
+                onClick={() => handleAddToCart(product)}
+              >
+                Add to Cart
+              </button>
+            </p>
             </div>
           ))}
         </div>
