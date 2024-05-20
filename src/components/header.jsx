@@ -24,8 +24,8 @@ const Header = ({ cartCount, cart}) =>  {
         </a>
       </div>
       <div className="flex flex-col lg:flex-row lg:items-center lg:gap-4 lg:ml-auto">
-          <a className="text-lg font-medium hover:text-rose-800 mb-2 lg:mb-0" href="#our-story" rel="ugc">Our Story</a>
-          <a className="text-lg font-medium hover:text-rose-800 mb-2 lg:mb-0" href="#products" rel="ugc">Our Breadcrumbs</a>
+          <a className="text-lg font-medium hover:text-rose-800 mb-2 lg:mb-0" href="/#our-story" rel="ugc">Our Story</a>
+          <a className="text-lg font-medium hover:text-rose-800 mb-2 lg:mb-0" href="/#products" rel="ugc">Our Breadcrumbs</a>
           <Link to="/shop" className="text-lg font-medium hover:text-rose-800 mb-2 lg:mb-0">Shop</Link>
           <Link to="/recipes" className="text-lg font-medium hover:text-rose-800 mb-2 lg:mb-0">Recipes</Link>
           <Link to="/stockists" className="text-lg font-medium hover:text-rose-800 mb-2 lg:mb-0">Stockists</Link>

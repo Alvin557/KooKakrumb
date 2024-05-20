@@ -38,7 +38,7 @@ const CartPage = ({ cart }) => {
         </table>
         <div className="mt-4">
           <p className="text-lg font-bold mb-6">Total: ${calculateTotal().toFixed(2)}</p>
-          <Link to="/Checkout" className="bg-rose-900 text-white px-4 py-2 rounded-md mt-16">
+          <Link to="https://buy.stripe.com/5kAcQqbpFckE5XOeUU" className="bg-rose-900 text-white px-4 py-2 rounded-md mt-16">
                   Proceed to checkout
           </Link>
         </div>
