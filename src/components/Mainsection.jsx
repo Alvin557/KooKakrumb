@@ -2,6 +2,7 @@ import React from 'react';
 import breadcrumbImage from '../assets/breadcrumbs.jpeg'; // Import your image file
 import breadcrumb from '../assets/breadcrumbs1.jpeg';
 import Products from './products.jsx';
+import {Link} from 'react-router-dom';
 
 const MainSection = () =>{
   return (
@@ -69,6 +70,17 @@ const MainSection = () =>{
         Our Breamcrumbs
         </h2>
        < Products />
+       <Link to='https://www.facebook.com/people/Kookakrumb/100054215602486/'
+                 target='_blank'
+                className='flex justify-center mt-16 p-4 text-4xl font-bold' 
+              >
+                <img
+                  className="max-w-[85px]"
+                  src="https://ucarecdn.com/6f56c0f1-c9c0-4d72-b44d-51a79ff38ea9/"
+                  alt="Facebook"
+                />
+              <span className='p-4 text-rose-900'>Connect With Us on Facebook</span>
+              </Link>
   
     </section>
 </main>
