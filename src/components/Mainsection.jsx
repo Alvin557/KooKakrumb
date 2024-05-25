@@ -12,9 +12,10 @@ const MainSection = () =>{
             <div className="grid items-center gap-6 lg:grid-cols-[1fr_750px]">
             <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
     <div className="space-y-3">
-      <h2 className="text-xl md:text-3xl lg:text-4xl font-bold tracking-tighter md:text-center text-rose-900 break-all w-11/12">
+      <h2 className="text-lg md:text-2xl lg:text-3xl font-bold tracking-tighter md:text-center text-rose-900 break-all w-11/12">
         Kookakrumb Seasoned Breadcrumbs: A Delicious Tale!
-      </h2>
+</h2>
+
       <p className="mx-auto max-w-[600px] text-sm font-semibold md:text-base lg:text-lg text-gray-500 md:text-center dark:text-gray-400 lg:text-start">
         Experience the delight of our premium quality breadcrumb coatings for food, available in Australian and International markets.
       </p>
@@ -59,7 +60,7 @@ const MainSection = () =>{
             <p className="max-w-4/5 text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
             Kookakrumb Seasoned Breadcrumbs is proudly, an Australian run family business, that produces premium quality breadcrumb coatings for food, within Australian and International markets. The business first start producing the delicious breadcrumbs in a small factory located in Subiaco, WA. Slowly as the demand for Kookakrumb breadcrumbs increased a larger processing facility had to be sourced and we moved over to Osborne Park, WA. This Western Australian family owned business is backed by a team that encourages a close knit and fun work place culture.  
             </p>
-            <button className="flex items-center justify-center w-48 bg-gray-900 px-2 py-3 text-xl font-medium text-gray-50 shadow transition-colors hover:bg-rose-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300 rounded-md">Learn More!</button>
+            <button className="flex items-center justify-center w-48 bg-gray-900 px-2 py-3 text-xl font-medium text-gray-50 shadow transition-colors hover:bg-rose-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300 rounded-md">Welcome!</button>
             </div>
             
         </div>

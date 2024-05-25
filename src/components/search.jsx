@@ -5,33 +5,55 @@ import { useNavigate } from 'react-router-dom';
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [error, setError] = useState('');
-  const [placeholder, setPlaceholder] = useState('Search...'); // State for placeholder text
+  const [placeholder, setPlaceholder] = useState('Search...');
   const navigate = useNavigate();
 
   const handleSearch = async (event) => {
     event.preventDefault();
-    // Reset error state
     setError('');
+    setPlaceholder('Search...');
+
     try {
-      const currentSearchTerm = searchTerm; // Capture the current value of searchTerm
-      const response = await axios.get(`http://www.localhost:1337/api/products?populate=*&Title_contains=${currentSearchTerm}`, {
-        headers: {
-          Authorization: 'Bearer ad6ace83831cafcaba86a9d98d3e9fb038098bb093c5bfb6ad313391de1f2d139d2b59a2c933d8a0ddd66aaa3ddbcc7a468b53ceba2274f8a43f8848d03341dfa20c03d494c7e29ef510eb23fd87866fbba78c343c8cab2148798b442b14e3189ac2609ea943d56a114390b02915c2e254bfe9392d4f25d34002b8483217ee24',
+      const currentSearchTerm = searchTerm.trim(); // Capture and trim the current value of searchTerm
+      console.log(`Searching for: ${currentSearchTerm}`);
+
+      // Make sure the search term is not empty
+      if (!currentSearchTerm) {
+        setError('Please enter a search term.');
+        setPlaceholder('Please enter a search term...');
+        return;
+      }
+
+      // API request
+      const response = await axios.get(
+        `http://localhost:1337/api/products?populate=*&filters[Title][$containsi]=${currentSearchTerm}`,
+        {
+          headers: {
+            Authorization: `Bearer 38e5aaa1c61205f23b25f48bb1a29f803a902858a035975ae583528f4df39d96ad1f6f80a32ca923987b9272076c800db87e89357aa191a09f12bba633454be2068af3502d40162fea8ecbe34fbe4c0322ffb40f03fdbdc5ced8f776d1aee05866758112325fb9241c276b8126d93a07eb9a1685f732f84c3156721236877c5b`,
+          },
         }
-      });
-      const products = response.data.data;
-      const matchingProducts = products.filter(product =>
-        product.attributes.Title && product.attributes.Title.toLowerCase().includes(currentSearchTerm.toLowerCase())
       );
-      if (matchingProducts.length > 0) {
-        navigate('/shop', { state: { products: matchingProducts } });
+
+      console.log('API response:', response.data);
+
+      // Check if response data is valid
+      if (!response.data || !response.data.data) {
+        setError('Invalid API response.');
+        return;
+      }
+
+      // Get products from the response
+      const products = response.data.data;
+
+      if (products.length > 0) {
+        navigate('/shop', { state: { products } });
       } else {
         setError('No results found, Search Again');
-        setPlaceholder('No products found. Try again...'); // Update placeholder text
+        setPlaceholder('No products found. Try again...');
       }
     } catch (error) {
       setError('Search failed');
-      setPlaceholder('Error searching. Try again...'); // Update placeholder text
+      setPlaceholder('Error searching. Try again...');
       console.error('Search failed', error);
     }
   };
@@ -44,9 +66,12 @@ const Search = () => {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           className="w-full rounded-md border border-[#DDE2E4] px-3 py-2 pl-10 text-sm hover:border-rose-800"
-          placeholder={placeholder} // Use dynamic placeholder
+          placeholder={placeholder}
         />
-        <button type="submit" className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gra-400 hover:text-rose-900">
+        <button
+          type="submit"
+          className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-rose-900"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -69,3 +94,5 @@ const Search = () => {
 };
 
 export default Search;
+
+

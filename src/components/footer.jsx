@@ -42,15 +42,15 @@ export const Footer = () => {
         <ul className="text-gray-500 dark:text-gray-400 font-medium">
           <li className="mb-4 flex">
             <img className="w-5 h-5 mr-1" src={Phone} alt="Phone Icon" />
-            <span className="hover:text-rose-900">+417385******</span>
+            <span className="hover:text-rose-900">+61 (0)8 9444 1197 </span>
           </li>
           <li className="mb-4 flex">
             <img className="w-5 h-5 mr-2" src={Email} alt="Email Icon" />
-            <span className="hover:text-rose-900">KookAkrumb@gmail.com</span>
+            <span className="hover:text-rose-900">kookakrumb@aol.com</span>
           </li>
           <li className="mb-4 flex">
             <img className="w-5 h-5 mr-2" src={Location} alt="Location Icon" />
-            <span className="hover:text-rose-900">Australia</span>
+            <span className="hover:text-rose-900">29 Division St, Welshpool, WA 6106</span>
           </li>
         </ul>
       </div>

@@ -8,30 +8,14 @@ import crumbs4 from '../assets/crumbs4.jpg';
 const ProductScroll = () => {
   const [cart, setCart] = useState([]);
   const [products, setProducts] = useState([
-    { id: 1, name: "Product 1", image: crumbs1, price: 29.99, reviews: 4.5 },
-    { id: 2, name: "Product 2", image: crumbs2, price: 39.99, reviews: 4.0 },
-    { id: 3, name: "Product 3", image: crumbs3, price: 49.99, reviews: 4.8 },
-    { id: 4, name: "Product 4", image: crumbs4, price: 49.99, reviews: 4.1 },
-    { id: 5, name: "Product 5", image: crumbs1, price: 29.99, reviews: 4.5 },
-    { id: 6, name: "Product 6", image: crumbs2, price: 39.99, reviews: 4.0 },
-    { id: 7, name: "Product 7", image: crumbs3, price: 49.99, reviews: 4.8 },
-    { id: 8, name: "Product 8", image: crumbs4, price: 49.99, reviews: 4.1 },
-    { id: 9, name: "Product 9", image: crumbs1, price: 29.99, reviews: 4.5 },
-    { id: 10, name: "Product 10", image: crumbs2, price: 39.99, reviews: 4.0 },
-    { id: 11, name: "Product 11", image: crumbs3, price: 49.99, reviews: 4.8 },
-    { id: 12, name: "Product 12", image: crumbs4, price: 49.99, reviews: 4.1 },
-    { id: 13, name: "Product 1", image: crumbs1, price: 29.99, reviews: 4.5 },
-    { id: 14, name: "Product 2", image: crumbs2, price: 39.99, reviews: 4.0 },
-    { id: 15, name: "Product 3", image: crumbs3, price: 49.99, reviews: 4.8 },
-    { id: 16, name: "Product 4", image: crumbs4, price: 49.99, reviews: 4.1 },
-    { id: 17, name: "Product 5", image: crumbs1, price: 29.99, reviews: 4.5 },
-    { id: 18, name: "Product 6", image: crumbs2, price: 39.99, reviews: 4.0 },
-    { id: 19, name: "Product 7", image: crumbs3, price: 49.99, reviews: 4.8 },
-    { id: 20, name: "Product 8", image: crumbs4, price: 49.99, reviews: 4.1 },
-    { id: 21, name: "Product 9", image: crumbs1, price: 29.99, reviews: 4.5 },
-    { id: 22, name: "Product 10", image: crumbs2, price: 39.99, reviews: 4.0 },
-    { id: 23, name: "Product 11", image: crumbs3, price: 49.99, reviews: 4.8 },
-    { id: 24, name: "Product 12", image: crumbs4, price: 49.99, reviews: 4.1 },
+    { id: 1, name: "Gourment Stuffing", image: crumbs1, price: 4.0, reviews: 4.5 },
+    { id: 2, name: "Cajun Spices", image: crumbs2, price: 4.0, reviews: 4.0 },
+    { id: 3, name: "Parmesan", image: crumbs3, price: 4.0, reviews: 4.8 },
+    { id: 4, name: "Glutten Free Fine White", image: crumbs4, price: 5.4, reviews: 4.1 },
+    { id: 1, name: "Gourment Stuffing", image: crumbs1, price: 4.0, reviews: 4.5 },
+    { id: 2, name: "Cajun Spices", image: crumbs2, price: 4.0, reviews: 4.0 },
+    { id: 3, name: "Parmesan", image: crumbs3, price: 4.0, reviews: 4.8 },
+    { id: 4, name: "Glutten Free Fine White", image: crumbs4, price: 5.4, reviews: 4.1 },
   ]);
 
   const addToCart = (product) => {
@@ -65,11 +49,11 @@ const ProductScroll = () => {
                 <h3 className="font-bold text-white text-lg">{product.name}</h3>
                 <p className="text-white mt-2">Price: ${product.price}</p>
                 <p className="text-white mt-2">Reviews: {product.reviews}</p>
-                <button
+                {/* <button
                   className="mt-4 bg-slate-950 text-white px-4 py-2 rounded hover:text-rose-900"
                 >
                   View Product
-                </button>
+                </button> */}
               </div>
             </div>
           </div>
